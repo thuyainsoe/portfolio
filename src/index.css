@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container-md {
+    @apply px-[14.5833%] 2xl:px-[60px] max-w-[1700px] mx-auto;
+  }
+}
+
+:root {
+  --gradient-color: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.linear-text {
+  background-color: #8bc6ec;
+  background-image: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.background-linear {
+  background-image: var(--gradient-color);
+}
+
+.side-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom;
+  background-color: #282828;
+  z-index: 2;
+}
+
+.side-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #282828;
+  transform-origin: top;
+  z-index: 2;
+}
+
+.befor-line::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-image: var(--gradient-color);
+  z-index: 0;
+}
+
+.box-shadow {
+  box-shadow: 0px 4px 40px 0px rgba(1, 93, 159, 0.1);
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  width: 44px;
+  height: 22px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox-label .ball {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
