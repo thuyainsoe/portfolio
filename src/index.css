@@ -4,7 +4,7 @@
 
 @layer components {
   .container-md {
-    @apply px-[14.5833%] 2xl:px-[60px] max-w-[1700px] mx-auto;
+    @apply px-[20px] lg:px-[14.5833%] 2xl:px-[60px] max-w-[1700px] mx-auto;
   }
 }
 
@@ -95,4 +95,8 @@
 
 .checkbox:checked + .checkbox-label .ball {
   transform: translateX(24px);
+}
+
+.transition-3s {
+  transition: all 0.3s;
 }
