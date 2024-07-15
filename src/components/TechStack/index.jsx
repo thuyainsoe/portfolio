@@ -32,17 +32,20 @@ const TechStack = () => {
     <Transition>
       <div
         className="container-md w-full h-[calc(100vh-100px)] flex flex-col
-      text-[#282828] dark:text-white justify-center pb-[100px] bg-white dark:bg-[#121212]"
+      text-[#282828] dark:text-white justify-center py-[40px] md:pb-[100px] bg-white dark:bg-[#121212]"
       >
         <div className="flex flex-col gap-[30px]">
-          <h2 className="font-bold text-[2.5rem] befor-line relative">
+          <h2 className="font-bold text-[2rem] md:text-[2.5rem] relative">
             My Tech Stack
           </h2>
           <div>Technologies I’ve been working.</div>
         </div>
         <div className="mt-[30px] flex flex-row flex-wrap w-full justify-center gap-[40px]">
           {logos.map((logo, index) => (
-            <div className="w-[calc((100%-5*40px)/6)] h-[80px]" key={index}>
+            <div
+              className="w-[calc((100%-3*40px)/4)] md:w-[calc((100%-5*40px)/6)] h-[80px]"
+              key={index}
+            >
               <img
                 className="w-full h-full object-contain"
                 src={logo.path}

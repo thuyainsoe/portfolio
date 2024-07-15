@@ -62,10 +62,10 @@ const educationData = [
 const About = () => {
   return (
     <Transition>
-      <div className="container-md w-full py-[100px] flex flex-col gap-[30px] bg-white dark:bg-[#121212]">
+      <div className="container-md w-full py-[40px] md:py-[100px] flex flex-col gap-[30px] bg-white dark:bg-[#121212]">
         {/* About Me */}
         <div className="flex flex-col gap-[30px] max-w-[800px] text-[#282828] dark:text-white">
-          <h2 className="font-bold text-[2.5rem] befor-line relative">
+          <h2 className="font-bold text-[2rem] md:text-[2.5rem] relative">
             About Me
           </h2>
           <div>
@@ -77,7 +77,7 @@ const About = () => {
         </div>
         {/* Work Experience */}
         <div className="flex flex-col mb-[30px] text-[#282828] dark:text-white">
-          <h2 className="font-bold text-[2.5rem] befor-line relative">
+          <h2 className="font-bold text-[2rem] md:text-[2.5rem] relative">
             Work Experience
           </h2>
           {experienceData.map((data) => (
@@ -85,7 +85,7 @@ const About = () => {
               className="max-w-[800px] py-[20px] border-b border-[#2828286d] dark:border-[#ffffff79]"
               key={data.id}
             >
-              <div className="w-full flex flex-row justify-between items-center">
+              <div className="w-full flex flex-col md:flex-row justify-between md:items-center gap-[10px]">
                 {/* right section */}
                 <div className="flex flex-col gap-[10px]">
                   <div className="flex flex-col">{data.position}</div>
@@ -143,7 +143,7 @@ const About = () => {
         </div>
         {/* Education */}
         <div className="flex flex-col mb-[30px] text-[#282828] dark:text-white">
-          <h2 className="font-bold text-[2.5rem] befor-line relative">
+          <h2 className="font-bold text-[2rem] md:text-[2.5rem] relative">
             Education
           </h2>
           {educationData.map((data) => (
@@ -151,7 +151,7 @@ const About = () => {
               className="max-w-[800px] py-[20px] border-b border-[#2828286d] dark:border-[#ffffff79]"
               key={data.id}
             >
-              <div className="w-full flex flex-row justify-between items-center">
+              <div className="w-full flex flex-col md:flex-row justify-between md:items-center gap-[10px]">
                 {/* right section */}
                 <div className="flex flex-col gap-[10px]">
                   <div className="flex flex-col">{data.major}</div>

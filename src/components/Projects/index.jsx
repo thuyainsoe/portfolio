@@ -49,7 +49,7 @@ const Projects = () => {
     <Transition>
       <div className="container-md py-[100px] bg-white dark:bg-[#121212] text-[#282828] dark:text-white">
         <div className="flex flex-col gap-[30px]">
-          <h2 className="font-bold text-[2.5rem] befor-line relative">
+          <h2 className="font-bold text-[2rem] md:text-[2.5rem] relative">
             Projects
           </h2>
         </div>

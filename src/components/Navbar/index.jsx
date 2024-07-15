@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = ({ dark, clickToggle }) => {
   const [showNav, setShowNav] = useState(false);
   return (
-    <div className="container-md py-[30px] h-[100px] flex items-center justify-between w-full bg-white dark:bg-[#121212] sticky top-0 z-[1]">
+    <div className="container-md py-[30px] h-[70px] md:h-[100px] flex items-center justify-between w-full bg-white dark:bg-[#121212] sticky top-0 z-[1]">
       <div className="w-fit text-white py-[5px] rounded-lg px-[10px] font-bold text-[14px] text-nowrap background-linear">
         {"< TYS />"}
       </div>
@@ -138,7 +138,7 @@ const Navbar = ({ dark, clickToggle }) => {
           showNav ? "!left-0" : ""
         }`}
       >
-        <div className="flex items-center justify-between p-[20px] py-[30px] h-[100px]">
+        <div className="flex items-center justify-between p-[20px] py-[30px] h-[70px] md:h-[100px]">
           <div className="w-fit text-white py-[5px] rounded-lg px-[10px] font-bold text-[14px] text-nowrap background-linear">
             {"< TYS />"}
           </div>
@@ -156,7 +156,7 @@ const Navbar = ({ dark, clickToggle }) => {
             />
           </svg>
         </div>
-        <div className="ml-[20px]">
+        <div className="ml-[20px] mt-[20px]">
           <input
             type="checkbox"
             className="checkbox"
@@ -199,6 +199,9 @@ const Navbar = ({ dark, clickToggle }) => {
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "linear-text" : ""
             }
+            onClick={() => {
+              setShowNav(false);
+            }}
           >
             Home
           </NavLink>
@@ -207,6 +210,9 @@ const Navbar = ({ dark, clickToggle }) => {
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "linear-text" : ""
             }
+            onClick={() => {
+              setShowNav(false);
+            }}
           >
             About
           </NavLink>
@@ -215,6 +221,9 @@ const Navbar = ({ dark, clickToggle }) => {
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "linear-text" : ""
             }
+            onClick={() => {
+              setShowNav(false);
+            }}
           >
             Tech Stack
           </NavLink>
@@ -223,10 +232,20 @@ const Navbar = ({ dark, clickToggle }) => {
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "linear-text" : ""
             }
+            onClick={() => {
+              setShowNav(false);
+            }}
           >
             Projects
           </NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink
+            to="/contact"
+            onClick={() => {
+              setShowNav(false);
+            }}
+          >
+            Contact
+          </NavLink>
         </ul>
         <ul className="px-[20px] flex flex-row gap-[20px]">
           <li>
